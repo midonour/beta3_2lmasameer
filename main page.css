@@ -1,104 +1,110 @@
- body {
-     font-family: Arial, sans-serif;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-     background-color: #f4f4f4;
-     margin: 0;
- }
+* {
+    border-radius: 20px;
+    box-sizing: border-box;
+    direction: rtl;
+}
 
- * {
-     border-radius: 20px;
-     box-sizing: border-box;
-     direction: rtl;
- }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    width: 100%;
+}
 
- .container {
-     height: 90%;
-     display: flex;
-     width: 80%;
-     background: white;
-     padding: 20px;
-     border: 1px solid black;
-     gap: 10px;
- }
+.container {
+    height: 90%;
+    display: flex;
+    width: 80%;
+    background: white;
+    padding: 15px;
+    border: 1px solid black;
+    gap: 10px;
+}
 
- .section {
-     flex: 1;
-     padding: 10px;
-     border: 1px solid black;
-     text-align: center;
-     display: flex;
-     justify-content: center;
- }
+.section {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    width: 33.3%;
+    justify-content: center;
+}
 
- #clientDetails{
+#clientDetails {
     flex-direction: column;
- }
- #clientDetails p{
+}
+
+#clientDetails p {
     position: relative;
-    bottom: 140px;
- }
- .order-form {
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     align-items: center;
-     width: 100%;
- }
+    bottom:10%;
+}
 
- .inputs {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
- }
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
 
- .inputs select {
-     border: 1px solid red;
-     padding: 5px;
-     width: 45%;
- }
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
- table {
-     width: 100%;
-     border-collapse: collapse;
- }
-
- table,
- th,
- td {
-     border: 1px solid red;
-     text-align: center;
-     padding: 10px;
- }
- #weight{
+.inputs select {
     border: 1px solid red;
- }
+    padding: 5px;
+    width: 45%;
+}
 
- .buttons {
-     display: flex;
-     justify-content: center;
-     width: 100%;
- }
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
 
- .buttons button {
-     border: none;
-     padding: 10px;
-     cursor: pointer;
-     background-color: #2264e5;
-     color: white;
- }
+table,
+th,
+td {
+    border: 1px solid red;
+    text-align: center;
+    padding: 5px;
+}
 
- .total {
-     border: 1px solid #2264e5;
-     padding: 10px;
-     text-align: center;
-     margin-top: 10px;
-     width: 25%;
- }
+#weight {
+    border: 1px solid red;
+    width: 45%;
+}
 
- button:hover {
-     position: relative;
-     bottom: 2px;
- }
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.buttons button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #2264e5;
+    color: white;
+}
+
+.total {
+    border: 1px solid #2264e5;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    width: 50%;
+}
+
+button:hover {
+    position: relative;
+    bottom: 2px;
+}
