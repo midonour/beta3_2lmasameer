@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل دخول</title>
+    <link  rel="icon" type="image/png"  href="logo.png"/>
+    <link rel="stylesheet" href="Login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>تسجيل دخول</h2>
+      <form action="#">
+        <div class="input-group">
+          <label for="email">حساب جيميل</label>
+          <input type="text" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">كلمة المرور</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="btn" id="submit">دخول</button>
+        <p class="signup-link">
+          ليس لديك حساب؟ <a href="signup.html">تسجيل حساب</a>
+        </p>
+      </form>
+    </div>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

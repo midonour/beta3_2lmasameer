@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+body {
+    min-height: 90vh;
+    background-color: #eee;
+    font-family: 'Figtree', sans-serif;
+}
+
+.parent {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.formContent {
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#frm {
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+
+input[type="text"] {
+    width: 36.5%;
+}
+
+input[type="password"] {
+    width: 86%;
+}
+#mobile{
+    width: 86%;
+}
+input[type="email"] {
+    width: 86%;
+}
+
+#submit {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 40px;
+    width: 93%;
+    background-color: #2264e5;
+    color: white;
+    border: none;
+    font-size: 23px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 10px;
+    color: #2264e5;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: #2264e5;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#submit:hover {
+    position: relative;
+    bottom: 5px;
+}
+
+.log {
+    text-align: center;
+}
+a:visited {
+    color: red;
+}
+
+a:link {
+    color: #2264e5;
+}

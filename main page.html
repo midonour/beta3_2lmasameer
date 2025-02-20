@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="main page.css" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "DPw8DtLdbGvufEJMJ",
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section" id="clientDetails">
+        <p id="data">بيانات العميل</p>
+        <br />
+        <p id="name">الاسم:</p>
+        <br />
+        <p id="email">الجيميل:</p>
+        <br />
+        <p id="phone">رقم الهاتف:</p>
+        <br />
+      </div>
+      <div class="section">
+        <div class="order-form">
+          <div class="inputs">
+            <select id="kind">
+              <option value="">النوع</option>
+              <option value="مسمار">مسمار</option>
+              <option value="صامولة">صامولة</option>
+              <option value="صامولة">وردة</option>
+            </select>
+            <select id="size">
+              <option value="">المقاس</option>
+              <option value="10">10</option>
+              <option value="13">13</option>
+              <option value="17">17</option>
+              <option value="19">19</option>
+              <option value="تكة">تكة</option>
+            </select>
+          </div>
+          <div class="inputs">
+            <select id="length">
+              <option value="">الطول</option>
+              <option value="2">2 سم</option>
+              <option value="4">4 سم</option>
+              <option value="6">6 سم</option>
+              <option value="8">8 سم</option>
+              <option value="10">10 سم</option>
+            </select>
+            <input
+              type="text"
+              name="weight"
+              id="weight"
+              placeholder="الكمية (بالكيلو)"
+            />
+          </div>
+          <div class="buttons">
+            <button id="add">إضافة العنصر</button>
+          </div>
+          <table id="order">
+            <thead>
+              <tr>
+                <th>طلب</th>
+                <th>وزن</th>
+                <th>الحساب</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+          </table>
+          <div class="total" id="total">الحساب:<br /></div>
+          <div class="buttons">
+            <button id="confirm">تسجيل الطلب</button>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="previous">حساب سابق</div>
+    </div>
+    <script type="module" src="main page.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>
