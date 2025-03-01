@@ -149,7 +149,7 @@ async function checkWeightAvailability(productID, requestedWeight) {
 }
 let orderTable = document.getElementById("order");
 let elementTotal = 0;
-let total = document.getElementById('total');
+let total = document.getElementById("total");
 addbtn.addEventListener("click", async (e) => {
   e.preventDefault();
 
@@ -181,10 +181,9 @@ addbtn.addEventListener("click", async (e) => {
       await updateQuantity(productID, requestedWeight);
       if (productPrice !== null) {
         let element = ``;
-        if (length.style.visibility == 'hidden') {
+        if (length.style.visibility == "hidden") {
           element = `${kind.value} ${size.value}`;
-        }
-        else {
+        } else {
           element = `${kind.value} ${size.value} طول ${length.value} سم`;
         }
         let elementWeight = `${weight.value} كجم`;
@@ -214,15 +213,16 @@ addbtn.addEventListener("click", async (e) => {
 });
 
 const confirmOrder = document.getElementById("confirm");
- function sendEmail(Subject, fromName, Message) {
-   let params = {
-     subject: Subject,
-     name: fromName,
-     message: Message,
-   };
+function sendEmail(Subject, fromName, Message, fromemail) {
+  let params = {
+    subject: Subject,
+    name: fromName,
+    fromEmail: fromemail,
+    message: Message,
+  };
 
-   emailjs.send("service_pyo1tw6", "template_742esac", params);
- }
+  emailjs.send("service_pyo1tw6", "template_742esac", params);
+}
 confirmOrder.addEventListener("click", async (e) => {
   e.preventDefault();
   let row = document.querySelectorAll("tbody tr");
@@ -247,9 +247,9 @@ confirmOrder.addEventListener("click", async (e) => {
     });
     console.log("New order created with ID: ", newOrderRef.id);
     alert("تم إنشاء الطلب بنجاح!");
-    sendEmail("طلبية جديدة", username, orderArray);
+    sendEmail("طلبية جديدة", username, orderArray, useremail);
     document.getElementById("tablebody").innerHTML = "";
-    total.innerHTML = 'الحساب:';
+    total.innerHTML = "الحساب:";
   } catch (error) {
     console.error("Error creating order: ", error);
     alert("حدث خطأ أثناء إنشاء الطلب. الرجاء المحاولة مرة أخرى.");

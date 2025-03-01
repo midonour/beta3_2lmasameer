@@ -1,5 +1,6 @@
 * {
     border-radius: 20px;
+    font-size: large;
     box-sizing: border-box;
     direction: rtl;
 }
@@ -7,96 +8,98 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
-    margin: 0;
     width: 100%;
 }
 
 .container {
-    height: 90%;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 80%;
+    height: 90%;
     background: white;
-    padding: 15px;
     border: 1px solid black;
     gap: 10px;
+
 }
 
 .section {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     border: 1px solid black;
     text-align: center;
-    display: flex;
-    width: 33.3%;
-    justify-content: center;
+    width: 30%;
+}
+
+#previous{
+    margin: 5px 0px 5px 5px;
 }
 
 #clientDetails {
     flex-direction: column;
+    margin: 5px 5px 5px 0px;
 }
 
-#clientDetails p {
-    position: relative;
-    bottom:10%;
+#makeOrder{
+    margin: 5px 0px;
 }
 
 .order-form {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.inputs {
-    display: flex;
-    justify-content: space-between;
+select {
+    border: 1px solid red;
+    margin: 10px;
     width: 100%;
 }
 
-.inputs select {
+input {
+    width: 100%;
     border: 1px solid red;
-    padding: 5px;
-    width: 45%;
+    margin:0px 10px 10px;
 }
+
 
 table {
     width: 70%;
     border-collapse: collapse;
+    margin: 5px 50px;
 }
 
 table,
 th,
 td {
     border: 1px solid red;
-    text-align: center;
+    align-items: center;
     padding: 5px;
 }
 
-#weight {
-    border: 1px solid red;
-    width: 45%;
-}
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
-.buttons button {
+button {
+    width: fit-content;
+    position: relative;
+    right: 35%;
     border: none;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     background-color: #2264e5;
     color: white;
+    margin: 5px;
 }
 
-.total {
+/* .total {
     border: 1px solid #2264e5;
     padding: 10px;
     text-align: center;
@@ -107,4 +110,4 @@ td {
 button:hover {
     position: relative;
     bottom: 2px;
-}
+} */
