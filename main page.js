@@ -51,13 +51,13 @@ onAuthStateChanged(auth, async (user) => {
         userphone = userData.Phone;
         useremail = userData.Email;
         if (name) {
-          name.textContent += "<br>"+(userData.Name || "الاسم غير متاح"); // Handle cases where data might be missing
+          name.textContent += userData.Name || "الاسم غير متاح"; // Handle cases where data might be missing
         }
         if (email) {
-          email.textContent += "<br>"+(userData.Email || "الجيميل غير متاح");
+          email.innerHTML += "<br>" + (userData.Email || "الجيميل غير متاح");
         }
         if (phone) {
-          phone.textContent += "<br>"+ (userData.Phone || "رقم الهاتف غير متاح");
+          phone.textContent += userData.Phone || "رقم الهاتف غير متاح";
         }
       } else {
         console.log("User document not found in Firestore.");
