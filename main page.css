@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
     width: 100%;
@@ -20,6 +19,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 30px auto;
     width: 80%;
     height: 90%;
     background: white;
@@ -44,6 +44,11 @@ body {
 #clientDetails {
     flex-direction: column;
     margin: 5px 5px 5px 0px;
+    text-align: right;
+}
+
+#data{
+    text-align: center;
 }
 
 #makeOrder{
@@ -74,7 +79,8 @@ input {
 table {
     width: 70%;
     border-collapse: collapse;
-    margin: 5px 50px;
+    margin:15px 15%;
+    
 }
 
 table,
@@ -88,15 +94,15 @@ td {
 
 
 button {
-    width: fit-content;
-    position: relative;
-    right: 35%;
+    width: 40%;
+    font-size: 15px;
     border: none;
+    margin: 10px 30%;
     padding: 5px;
     cursor: pointer;
     background-color: #2264e5;
     color: white;
-    margin: 5px;
+    
 }
 
 /* .total {
