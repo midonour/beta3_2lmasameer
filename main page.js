@@ -217,8 +217,8 @@ function sendEmail(Subject, fromName, Message, fromemail) {
   let params = {
     subject: Subject,
     name: fromName,
-    fromEmail: fromemail,
     message: Message,
+    fromEmail: fromemail,
   };
 
   emailjs.send("service_pyo1tw6", "template_742esac", params);
@@ -245,6 +245,10 @@ confirmOrder.addEventListener("click", async (e) => {
       clientPhone: userphone,
       orderDetails: orderArray,
     });
+    if (orderArray.length == 0) {
+      alert("لا يوجد منتجات مطلوبة");
+      return;
+    }
     console.log("New order created with ID: ", newOrderRef.id);
     alert("تم إنشاء الطلب بنجاح!");
     sendEmail("طلبية جديدة", username, orderArray, useremail);

@@ -66,7 +66,8 @@ submit.addEventListener("click", async function (event) {
         Email: email,
         Phone: phone,
       });
-      alert("User created and document written with ID:", user.uid);
+      alert("تم انشاء الحساب بنجاح");
+      window.location = "login.html";
     } catch (error) {
       console.log(error.message);
       alert("هناك خطأ في التسجيل, حاول لاحقًا");
